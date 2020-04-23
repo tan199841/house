@@ -1,0 +1,56 @@
+	a{text-decoration: none;}
+			*{margin: 0px;padding: 0px;}
+			img{vertical-align: bottom;}
+			li{list-style: none;}
+			.header{
+				width: 100%;
+				height: 50px;
+				padding: 15px 0px;
+				background: rgba(121, 106, 238, 0.9);
+				
+			}
+			.container{height: 100%;
+			width: 1200px;
+			margin: 0px auto;
+			
+			}
+			.logo{float: left;}
+			.logo h1 a{color: white;line-height: 50px;}
+			.top-nav{float: right;line-height: 50px;}
+			.top-nav li{float: left;padding: 0px 6px; border-left:  solid gainsboro 1px;width: 80px;text-align: center; }
+			.top-nav li a{color: white; font-size: 20px;}
+				.house-title{padding-top: 40px;padding-bottom:40px;width: 1200px; margin: 0 auto; border-bottom: solid 2px silver;}
+			.mian-body{width: 1200px; margin: 0 auto;border-bottom: solid 2px silver;}
+			
+			.information{width: 1200px; margin: 0 auto; padding-top: 40px;}
+			label{color: #888;font-size: 24px; display: inline-block; width: 110px;}
+			.information p{
+				padding-top: 20px;
+				width: 400px;
+				height: 40px;
+				margin: 0 auto;
+				
+			}
+			
+			.information input{
+				width: 200px;
+				height: 28px;
+			}
+			
+			.information select{
+				width: 50px;
+				height: 28px;
+			}
+			
+			.information div{
+				padding-top: 20px;
+				width: 400px;
+				margin: 0 auto;
+			}
+			.information div input{
+				margin-top: 20px;
+				
+			}
+			.smt{
+				text-align: center;
+			}

@@ -1,0 +1,87 @@
+	a{text-decoration: none;}
+			*{margin: 0px;padding: 0px;}
+			img{vertical-align: bottom;}
+			li{list-style: none;}
+			.header{
+				width: 100%;
+				height: 50px;
+				padding: 15px 0px;
+				background: rgba(121, 106, 238, 0.9);
+				
+			}
+			.container{height: 100%;
+			width: 1200px;
+			margin: 0px auto;
+			
+			}
+			.logo{float: left;}
+			.logo h1 a{color: white;line-height: 50px;}
+			.top-nav{float: right;line-height: 50px;}
+			.top-nav li{float: left;padding: 0px 6px; border-left:  solid gainsboro 1px;width: 80px;text-align: center; }
+			.top-nav li a{color: white; font-size: 20px;}
+			.banner{background: url(img/banner.png);width: 100%; height: 600px;background-size: 100%;
+			background-repeat: no-repeat;position: relative;
+			border-bottom:solid gainsboro 3px;
+			}
+			.serach{
+				
+			
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -20px;
+				margin-left: -300px;
+				
+			}
+			.serach select{
+			width: 200px;
+			height: 56px;
+			border:none;
+           background: gainsboro;
+           opacity: 0.5;
+margin: 0px 10px;
+  float: left;
+  border-radius: 4px;
+			}
+			.search-icon{
+				width: 80px;
+				height: 56px;
+				float: left;
+				background: rgba(121, 106, 238, 0.9);
+				color: white;
+				cursor: pointer;
+				font-size: 20px;
+				font-weight: bold;
+				line-height: 56px;
+				text-align: center;
+			}
+			
+			.room{width:100%; height: 60px; border-bottom:solid orangered 1px;background:rgba(121, 106, 238, 0.9) ;}
+			.ld{width: 100px; height: 58px;line-height: 58px; color: white; 
+			text-align: center;border-radius: 6px;margin: 0px auto;font-size: 28px ;
+			}
+			.show-room{ padding: 20px 100px; }
+			.show-room p{
+				padding: 20px;
+				font-size: 20px;
+			}
+			.show-room p input{
+				width: 80px;
+				height: 30px;
+				text-align: center;
+				
+			}
+			.tbimg td {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #fff;
+    padding: 20px;}
+   .tbimg{
+   	width: 100%;
+   	}
+   	
+   	.show-room p span{
+				cursor: pointer;
+			}
+			.show-room p span:hover{
+				color:royalblue ;
+			}

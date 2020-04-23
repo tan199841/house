@@ -1,0 +1,59 @@
+a{text-decoration: none;}
+			*{margin: 0px;padding: 0px;}
+			img{vertical-align: bottom;}
+			li{list-style: none;}
+			
+			.left{
+				width: 250px;
+				height: 100vh;
+				background-color: #d7dde4;
+			}
+			
+			.left .parents{
+				width: 250px;
+				/*height:30px ;*/
+				border-bottom: solid seashell 1px;
+			  padding-left: 30px;
+				background: url(img/plus22.gif) no-repeat;
+				background-position-y: 50%;
+				background-position-x: 4px;
+				cursor: pointer;
+			}
+			.left li{
+				width: 250px;
+				/*height:30px ;*/
+				border-bottom: solid seashell 1px;
+				cursor: pointer;
+				padding: 10px 0px;
+			}
+			
+			.left .parent{
+				width: 250px;
+				/*height:30px ;*/
+				border-bottom: solid seashell 1px;
+			  padding-left: 30px;
+				background: url(img/jt0.gif) no-repeat;
+				background-position-y: 50%;
+				background-position-x: 4px;
+				cursor: pointer;
+			}
+			
+			.left .child{
+				width: 250px;
+				/*height:30px ;*/
+				border-bottom: solid seashell 1px;
+				cursor: pointer;
+				background: url(img/jt0.gif) no-repeat;
+				background-position-y: 50%;
+				background-position-x: 20px;
+				padding-left: 46px;
+			}
+			
+			.user{
+				/*display: none;*/
+			}
+			
+			.left li:hover{
+				color: white;
+				background-color: #17A2B8;
+			}

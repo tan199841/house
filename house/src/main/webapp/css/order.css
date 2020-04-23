@@ -1,0 +1,58 @@
+a{text-decoration: none;}
+			*{margin: 0px;padding: 0px;}
+			img{vertical-align: bottom;}
+			li{list-style: none;}
+			.header{
+				width: 100%;
+				height: 50px;
+				padding: 15px 0px;
+				background: rgba(121, 106, 238, 0.9);
+				
+			}
+			.container{height: 100%;
+			width: 1200px;
+			margin: 0px auto;
+			
+			}
+			.logo{float: left;}
+			.logo h1 a{color: white;line-height: 50px;}
+			.top-nav{float: right;line-height: 50px;}
+			.top-nav li{float: left;padding: 0px 6px; border-left:  solid gainsboro 1px;width: 80px;text-align: center; }
+			.top-nav li a{color: white; font-size: 20px;}
+				.house-title{padding-top: 40px;padding-bottom:40px;width: 1200px; margin: 0 auto; border-bottom: solid 2px silver;}
+			.mian-body{width: 1200px; margin: 0 auto;border-bottom: solid 2px silver;}
+			
+			
+		
+			
+			.show-room{ padding: 20px 100px; width: 1200px; margin: 0 auto;}
+			.show-room p{
+				padding: 20px;
+				font-size: 20px;
+			}
+			.show-room p input{
+				width: 60px;
+				height: 30px;
+				text-align: center;
+				
+			}
+			
+			.show-room p span{
+				cursor: pointer;
+			}
+			.show-room p span:hover{
+				color:royalblue ;
+			}
+			.tbimg td {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #fff;
+    padding: 20px;}
+   .tbimg{
+   	width: 100%;
+   	}
+   	.cancel div{
+   		cursor: pointer;
+   	}
+   	.cancel div:hover{
+   		color: royalblue;
+   	}

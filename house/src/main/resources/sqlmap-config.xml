@@ -6,6 +6,6 @@
 <configuration>	
 	<!-- 取别名方便管理维护 -->
 	<typeAliases>
-		<package name="cn.storm.pojo" />
+		<package name="cn.pojo" />
 	</typeAliases>
 </configuration>

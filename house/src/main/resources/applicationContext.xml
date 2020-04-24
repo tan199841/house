@@ -18,11 +18,12 @@
 	<!-- 组件扫描，凡是带有spring注解的类似@Repository，
 			@Service,@Controller等 
 			都会自动添加到spring的bean中-->
-	<context:component-scan base-package="cn.storm"/>
-	<!-- 加载外部数据库连接信息文件 -->
+	<context:component-scan base-package="cn" />
+
+	<!-- 加载外部数据库连接信息文件
 	
 	<context:property-placeholder location="classpath:jdbc.properties"/>
-
+ -->
 	<!-- 首先应该配置一个数据源 --> 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
@@ -33,10 +34,10 @@
 	<!-- 文件上传相关配置-->
 	<bean id="multipartResolver"
       class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-      <!--上传文件的最大大小，单位为字节 --> 
-      <property name="maxUploadSize" value="17367648787"></property>
-      <!-- 上传文件的编码 -->
-      <property name="defaultEncoding" value="UTF-8"></property>
+      <!--上传文件的最大大小，单位为字节 
+      <property name="maxUploadSize" value="17367648787"></property> -->
+      <!-- 上传文件的编码
+      <property name="defaultEncoding" value="UTF-8"></property> -->
   </bean>
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -53,7 +54,7 @@
 			<idref bean="sqlSessionFactory"/>
 		</property>
 		<!-- 注入要一次性代理的接口所在的包 -->
-		<property name="basePackage" value="cn.storm.mapper"/>
+		<property name="basePackage" value="cn.mapper"/>
 	</bean>
 	
 	<!-- 事务配置 -->
@@ -80,6 +81,4 @@
 	
 	<!-- 启用springmvc的注解模式 -->
 	<mvc:annotation-driven/>
-	
-	
 </beans>

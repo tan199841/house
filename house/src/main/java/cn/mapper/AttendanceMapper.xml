@@ -14,10 +14,11 @@
   		</select>
   		
   		<select id="selectAttendanceById" parameterType="_int" resultType="Attendance">
-  			select * from attendance where attendance_id = #{attendance_id}
+  			select * from attendance where attendance_id = #{id}
   		</select>
+  		
   		<delete id="deleteAttendanceById" parameterType="_int">
-  			delete from attendance where  attendance_id = #{attendance_id}
+  			delete from attendance where  attendance_id = #{id}
   		</delete>
   		<update id="updateAttendance" parameterType="Attendance">
   			update attendance set 

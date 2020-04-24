@@ -41,36 +41,46 @@ public class ServiceQuailty implements java.io.Serializable {
 		this.service_quality_id = service_quality_id;
 	}
 
-	public Integer getuser_id() {
-		return this.user_id;
+	public Integer getService_quality_id() {
+		return service_quality_id;
 	}
 
-	public void setuser_id(Integer user_id) {
+	public void setService_quality_id(Integer service_quality_id) {
+		this.service_quality_id = service_quality_id;
+	}
+
+	public Integer getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(Integer user_id) {
 		this.user_id = user_id;
 	}
 
-	public String getservice_quality_degree() {
-		return this.service_quality_degree;
+	public String getService_quality_degree() {
+		return service_quality_degree;
 	}
 
-	public void setservice_quality_degree(String service_quality_degree) {
+	public void setService_quality_degree(String service_quality_degree) {
 		this.service_quality_degree = service_quality_degree;
 	}
 
-	public Date getregister_time() {
-		return this.register_time;
+	public Date getRegister_time() {
+		return register_time;
 	}
 
-	public void setregister_time(Date register_time) {
+	public void setRegister_time(Date register_time) {
 		this.register_time = register_time;
 	}
 
 	public String getRegister() {
-		return this.register;
+		return register;
 	}
 
 	public void setRegister(String register) {
 		this.register = register;
 	}
+
+	
 
 }

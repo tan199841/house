@@ -17,8 +17,27 @@ public class Users implements java.io.Serializable {
 	private Short user_level;
 	private String id_card;
 	private Integer manager;
+	private String comfirm_password;
 
 	// Constructors
+
+	@Override
+	public String toString() {
+		return "Users [user_id=" + user_id + ", user_name=" + user_name
+				+ ", user_passord=" + user_passord + ", user_sex=" + user_sex
+				+ ", user_phone=" + user_phone + ", user_real_name="
+				+ user_real_name + ", user_level=" + user_level + ", id_card="
+				+ id_card + ", manager=" + manager + ", comfirm_password="
+				+ comfirm_password + "]";
+	}
+
+	public String getComfirm_password() {
+		return comfirm_password;
+	}
+
+	public void setComfirm_password(String comfirm_password) {
+		this.comfirm_password = comfirm_password;
+	}
 
 	/** default constructor */
 	public Users() {
@@ -38,78 +57,80 @@ public class Users implements java.io.Serializable {
 		this.manager = manager;
 	}
 
-	// Property accessors
-
-	public Integer getuser_id() {
-		return this.user_id;
+	public Integer getUser_id() {
+		return user_id;
 	}
 
-	public void setuser_id(Integer user_id) {
+	public void setUser_id(Integer user_id) {
 		this.user_id = user_id;
 	}
 
-	public String getuser_name() {
-		return this.user_name;
+	public String getUser_name() {
+		return user_name;
 	}
 
-	public void setuser_name(String user_name) {
+	public void setUser_name(String user_name) {
 		this.user_name = user_name;
 	}
 
-	public String getuser_passord() {
-		return this.user_passord;
+	public String getUser_passord() {
+		return user_passord;
 	}
 
-	public void setuser_passord(String user_passord) {
+	public void setUser_passord(String user_passord) {
 		this.user_passord = user_passord;
 	}
 
-	public String getuser_sex() {
-		return this.user_sex;
+	public String getUser_sex() {
+		return user_sex;
 	}
 
-	public void setuser_sex(String user_sex) {
+	public void setUser_sex(String user_sex) {
 		this.user_sex = user_sex;
 	}
 
-	public String getuser_phone() {
-		return this.user_phone;
+	public String getUser_phone() {
+		return user_phone;
 	}
 
-	public void setuser_phone(String user_phone) {
+	public void setUser_phone(String user_phone) {
 		this.user_phone = user_phone;
 	}
 
-	public String getuser_real_name() {
-		return this.user_real_name;
+	public String getUser_real_name() {
+		return user_real_name;
 	}
 
-	public void setuser_real_name(String user_real_name) {
+	public void setUser_real_name(String user_real_name) {
 		this.user_real_name = user_real_name;
 	}
 
-	public Short getuser_level() {
-		return this.user_level;
+	public Short getUser_level() {
+		return user_level;
 	}
 
-	public void setuser_level(Short user_level) {
+	public void setUser_level(Short user_level) {
 		this.user_level = user_level;
 	}
 
-	public String getid_card() {
-		return this.id_card;
+	public String getId_card() {
+		return id_card;
 	}
 
-	public void setid_card(String id_card) {
+	public void setId_card(String id_card) {
 		this.id_card = id_card;
 	}
 
 	public Integer getManager() {
-		return this.manager;
+		return manager;
 	}
 
 	public void setManager(Integer manager) {
 		this.manager = manager;
 	}
+
+	// Property accessors
+
+	
 
 }

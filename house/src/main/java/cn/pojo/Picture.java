@@ -24,30 +24,32 @@ public class Picture implements java.io.Serializable {
 		this.pic_url = pic_url;
 	}
 
-	// Property accessors
-
-	public Integer getpic_id() {
-		return this.pic_id;
+	public Integer getPic_id() {
+		return pic_id;
 	}
 
-	public void setpic_id(Integer pic_id) {
+	public void setPic_id(Integer pic_id) {
 		this.pic_id = pic_id;
 	}
 
-	public Integer gethouse_id() {
-		return this.house_id;
+	public Integer getHouse_id() {
+		return house_id;
 	}
 
-	public void sethouse_id(Integer house_id) {
+	public void setHouse_id(Integer house_id) {
 		this.house_id = house_id;
 	}
 
-	public String getpic_url() {
-		return this.pic_url;
+	public String getPic_url() {
+		return pic_url;
 	}
 
-	public void setpic_url(String pic_url) {
+	public void setPic_url(String pic_url) {
 		this.pic_url = pic_url;
 	}
+
+	// Property accessors
+
+	
 
 }

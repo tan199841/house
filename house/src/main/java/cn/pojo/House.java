@@ -56,18 +56,16 @@ public class House implements java.io.Serializable {
 		this.register_time = register_time;
 	}
 
-	// Property accessors
-
-	public Integer gethouse_id() {
-		return this.house_id;
+	public Integer getHouse_id() {
+		return house_id;
 	}
 
-	public void sethouse_id(Integer house_id) {
+	public void setHouse_id(Integer house_id) {
 		this.house_id = house_id;
 	}
 
 	public String getDistrict() {
-		return this.district;
+		return district;
 	}
 
 	public void setDistrict(String district) {
@@ -75,115 +73,118 @@ public class House implements java.io.Serializable {
 	}
 
 	public String getDevelopment() {
-		return this.development;
+		return development;
 	}
 
 	public void setDevelopment(String development) {
 		this.development = development;
 	}
 
-	public String getaddr_detail() {
-		return this.addr_detail;
+	public String getAddr_detail() {
+		return addr_detail;
 	}
 
-	public void setaddr_detail(String addr_detail) {
+	public void setAddr_detail(String addr_detail) {
 		this.addr_detail = addr_detail;
 	}
 
-	public String gethouse_name() {
-		return this.house_name;
+	public String getHouse_name() {
+		return house_name;
 	}
 
-	public void sethouse_name(String house_name) {
+	public void setHouse_name(String house_name) {
 		this.house_name = house_name;
 	}
 
-	public Double gethouse_area() {
-		return this.house_area;
+	public Double getHouse_area() {
+		return house_area;
 	}
 
-	public void sethouse_area(Double house_area) {
+	public void setHouse_area(Double house_area) {
 		this.house_area = house_area;
 	}
 
-	public String gethouse_level() {
-		return this.house_level;
+	public String getHouse_level() {
+		return house_level;
 	}
 
-	public void sethouse_level(String house_level) {
+	public void setHouse_level(String house_level) {
 		this.house_level = house_level;
 	}
 
-	public String gethouse_owner() {
-		return this.house_owner;
+	public String getHouse_owner() {
+		return house_owner;
 	}
 
-	public void sethouse_owner(String house_owner) {
+	public void setHouse_owner(String house_owner) {
 		this.house_owner = house_owner;
 	}
 
-	public String gethouse_owner_id_card() {
-		return this.house_owner_id_card;
+	public String getHouse_owner_id_card() {
+		return house_owner_id_card;
 	}
 
-	public void sethouse_owner_id_card(String house_owner_id_card) {
+	public void setHouse_owner_id_card(String house_owner_id_card) {
 		this.house_owner_id_card = house_owner_id_card;
 	}
 
-	public String gethouse_owner_phone() {
-		return this.house_owner_phone;
+	public String getHouse_owner_phone() {
+		return house_owner_phone;
 	}
 
-	public void sethouse_owner_phone(String house_owner_phone) {
+	public void setHouse_owner_phone(String house_owner_phone) {
 		this.house_owner_phone = house_owner_phone;
 	}
 
-	public Double gethouse_rent() {
-		return this.house_rent;
+	public Double getHouse_rent() {
+		return house_rent;
 	}
 
-	public void sethouse_rent(Double house_rent) {
+	public void setHouse_rent(Double house_rent) {
 		this.house_rent = house_rent;
 	}
 
-	public Short gethouse_status() {
-		return this.house_status;
+	public Short getHouse_status() {
+		return house_status;
 	}
 
-	public void sethouse_status(Short house_status) {
+	public void setHouse_status(Short house_status) {
 		this.house_status = house_status;
 	}
 
-	public String gethouse_owner_sex() {
-		return this.house_owner_sex;
+	public String getHouse_owner_sex() {
+		return house_owner_sex;
 	}
 
-	public void sethouse_owner_sex(String house_owner_sex) {
+	public void setHouse_owner_sex(String house_owner_sex) {
 		this.house_owner_sex = house_owner_sex;
 	}
 
-	public String gethouse_kind() {
-		return this.house_kind;
+	public String getHouse_kind() {
+		return house_kind;
 	}
 
-	public void sethouse_kind(String house_kind) {
+	public void setHouse_kind(String house_kind) {
 		this.house_kind = house_kind;
 	}
 
-	public String getbox_id() {
-		return this.box_id;
+	public String getBox_id() {
+		return box_id;
 	}
 
-	public void setbox_id(String box_id) {
+	public void setBox_id(String box_id) {
 		this.box_id = box_id;
 	}
 
-	public Date getregister_time() {
-		return this.register_time;
+	public Date getRegister_time() {
+		return register_time;
 	}
 
-	public void setregister_time(Date register_time) {
+	public void setRegister_time(Date register_time) {
 		this.register_time = register_time;
 	}
 
+	// Property accessors
+
+	
 }

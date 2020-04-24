@@ -8,7 +8,10 @@ import cn.service.AttendaceService;
 
 public class Test {
 	public static void main(String[] args) {
-         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+      int i=500;
+      Integer b=500;
+      Long c= 500L;
+      System.out.println(c.equals(500L));
         
         
 	}

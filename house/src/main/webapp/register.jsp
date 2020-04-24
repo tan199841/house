@@ -45,41 +45,41 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </div>
             <!-- Form Panel    -->
             <div class="col-lg-6 bg-white">
-              <div class="form d-flex align-items-center">
+              <form id="form1" class="form d-flex align-items-center" action="register.do" method="post">
                 <div class="content">
                     <div class="form-group">
-                      <input id="register-username" class="input-material" type="text" name="registerUsername" placeholder="请输入用户名/姓名(必填)" >
+                      <input id="register-username" class="input-material" type="text" name="user_name" placeholder="请输入用户名/姓名(必填)" >
 								      <div class="invalid-feedback">
 								        	用户名必须在2~10位之间
 								      </div>
                     </div>
                      <div class="form-group">
-                      <input id="register-idcard" class="input-material" type="text" name="registerIdcard" placeholder="请输入身份证(必填)"   >
+                      <input id="register-idcard" class="input-material" type="text" name="id_card" placeholder="请输入身份证(必填)"   >
                     	<div class="invalid-feedback">
 								        	身份证格式错误
 								      </div>
                     </div>
                      <div class="form-group">
-                      <input id="register-phone" class="input-material" type="text" name="registerPhone" placeholder="请输入手机号码(必填)"   >
+                      <input id="register-phone" class="input-material" type="text" name="user_phone" placeholder="请输入手机号码(必填)"   >
                     	<div class="invalid-feedback">
 								        	手机号码格式错误
 								      </div>
                     </div>
                      <div class="form-group">
-                      <input id="register-name" class="input-material" type="text" name="registerName" placeholder="请输入真实姓名(必填)"   >
+                      <input id="register-name" class="input-material" type="text" name="user_real_name" placeholder="请输入真实姓名(必填)"   >
                     	<div class="invalid-feedback">
 								        	真实姓名长度为2-6必须为中文
 								      </div>
                     </div>
                     
                     <div class="form-group">
-                      <input id="register-password" class="input-material" type="password" name="registerPassword" placeholder="请输入密码(必填)"   >
+                      <input id="register-password" class="input-material" type="password" name="user_passord" placeholder="请输入密码(必填)"   >
                     	<div class="invalid-feedback">
 								        	密码必须在6~10位之间
 								      </div>
                     </div>
                     <div class="form-group">
-                      <input id="register-passwords" class="input-material" type="password" name="registerPasswords" placeholder="确认密码(必填)"   >
+                      <input id="register-passwords" class="input-material" type="password" name="comfirm_password" placeholder="确认密码(必填)"   >
                     	<div class="invalid-feedback">
 								        	两次密码必须相同 且在6~10位之间
 								      </div>
@@ -87,11 +87,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <div class="form-group">
                       <button id="regbtn" type="button" name="registerSubmit" class="btn btn-primary">注册</button>
                     </div>
-                  <small>已有账号?</small><a href="login.html" class="signup">&nbsp;登录</a>
+                  <small>已有账号?</small><a href="login.jsp" class="signup">&nbsp;登录</a>
                    <br />
-                  <small>返回主页?</small><a href="index.html" class="signup">&nbsp;返回</a>
+                  <small>返回主页?</small><a href="index.jsp" class="signup">&nbsp;返回</a>
                 </div>
-             </div>
+             </form>
             </div>
           </div>
         </div>
@@ -118,7 +118,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		var name,passWord,passWords,card,phone,realname;
     		$("#register-username").change(function(){
     			name=$("#register-username").val();
-    			if(name.length>10||name.length<6){
+    			console.log(name);
+    			if(name.length>10||name.length<2){
     				$("#register-username").removeClass("form-control is-valid");
     				$("#register-username").addClass("form-control is-invalid");
     				flagName=false;
@@ -202,10 +203,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		
     		
     		$("#regbtn").click(function(){
+    		
     			if(flagName&&flagPas&&flagPass&flagPhone&flagrealname&flagCard){
-    				localStorage.setItem("name",name);
-    				localStorage.setItem("passWord",passWord);
-    				location="login.html"
+    			 $.ajax({
+            //几个参数需要注意一下
+                type: "POST",//方法类型
+                //dataType: "json",//预期服务器返回的数据类型
+                url: "register.do" ,//url
+                data: $('#form1').serialize(),
+                success: function (result) {
+                  if(typeof(result.value)=="string"){
+                  alert.log(result.value);
+                  }else{
+                  localStorage.setItem("username", result.value.user_name);
+                 
+                  alert("注册成功请登录")
+                  }
+                }
+               
+            });
+        
+    				
     			}else{
     				if(!flagName){
     					$("#register-username").addClass("form-control is-invalid");

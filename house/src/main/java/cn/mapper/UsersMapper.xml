@@ -14,10 +14,23 @@
   		</select>
   		
   		<select id="selectUsersById" parameterType="_int" resultType="Users">
-  			select * from users where user_id = #{user_id}
+  			select * from users where user_id = #{id}
   		</select>
+  		
+  		<select id="selectUsersByUserName" parameterType="string" resultType="string">
+  			select user_name from users where user_name = #{id}
+  		</select>
+  		
+  		<select id="selectUsersByIdCard" parameterType="string" resultType="string">
+  			select id_card from users where id_card = #{id}
+  		</select>
+  		
+  		<select id="selectUsersByNameAndPassord" parameterType="cn.dto.UsersDto" resultType="Users">
+  			select * from users where user_name = #{userName} and user_passord=#{passWord}
+  		</select>
+  		
   		<delete id="deleteUsersById" parameterType="_int">
-  			delete from users where  user_id = #{user_id}
+  			delete from users where  user_id = #{id}
   		</delete>
   		<update id="updateUsers" parameterType="Users">
   			update users set 

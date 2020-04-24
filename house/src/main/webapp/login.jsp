@@ -38,7 +38,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="col-lg-6 bg-white">
               <div class="form d-flex align-items-center">
                 <div class="content">
-                  <form method="post" action="login.html"  id="loginFrom">
+                  <form   id="loginFrom">
                     <div class="form-group">
                       <input id="login-username" type="text" name="userName" required data-msg="请输入用户名" placeholder="用户名" class="input-material">
                     </div>
@@ -49,14 +49,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <label class="control-label">角色：</label>
   
     <label class="radio-inline">
-        <input type="radio" name="sex" value="option1">普通用户
+        <input type="radio" name="role" value="0">普通用户
     </label>
     <label class="radio-inline">
-        <input type="radio" name="sex" value="option1">管理员
+        <input type="radio" name="role" value="1">管理员
     </label>
 </div>        
  
-                    <button id="login" type="submit" class="btn btn-primary">登录</button>
+                    <button id="login" type="button" class="btn btn-primary">登录</button>
                     <div style="margin-top: -40px;"> 
                     	<!-- <input type="checkbox"  id="check1"/>&nbsp;<span>记住密码</span>
                     	<input type="checkbox" id="check2"/>&nbsp;<span>自动登录</span> -->
@@ -71,9 +71,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </div>
                   </form>
                   <br />
-                  <small>没有账号?</small><a href="register.html" class="signup">&nbsp;注册</a>
+                  <small>没有账号?</small><a href="register.jsp" class="signup">&nbsp;注册</a>
                   <br />
-                  <small>返回主页?</small><a href="index.html" class="signup">&nbsp;返回</a>
+                  <small>返回主页?</small><a href="index.jsp" class="signup">&nbsp;返回</a>
                 </div>
               </div>
             </div>
@@ -89,6 +89,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!--<script src="js/front.js"></script>-->
     <script>
     	$(function(){
+    	
+    	/*拿到刚刚注册的账号*/
+    		if(localStorage.getItem("username")!=null){
+    			$("#login-username").val(localStorage.getItem("username"));
+    		}
     		/*判断上次是否勾选记住密码和自动登录*/
     		var check1s=localStorage.getItem("check1");
     		var check2s=localStorage.getItem("check2");
@@ -110,10 +115,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		}else{
     			$("#check2").prop('checked',false);
     		}
-    		/*拿到刚刚注册的账号*/
-    		/*if(localStorage.getItem("name")!=null){
-    			$("#login-username").val(localStorage.getItem("name"));
-    		}*/
+    		
     		/*登录*/
     		$("#login").click(function(){
     			var userName=$("#login-username").val();
@@ -126,6 +128,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    		var check2 = $('#check2').prop('checked');
 	    		localStorage.setItem("check1",check1);
 	    		localStorage.setItem("check2",check2);
+	    		
+	    		 $.ajax({
+            //几个参数需要注意一下
+                type: "POST",//方法类型
+                //dataType: "json",//预期服务器返回的数据类型
+                url: "login.do" ,//url
+                data: $('#loginFrom').serialize(),
+                success: function (result) {
+               
+                  console.log(result);
+                }
+               
+            });
     		})
     		
     		/*$("#check2").click(function(){

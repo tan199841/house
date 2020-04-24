@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="cn.mapper.AttendanceMapper">
+  		
+  
+  		<insert id="saveAttendance" parameterType="Attendance" >
+  			insert into attendance(user_id,attendance_status,attendance_clock_in,attendance_clock_out,in_work_place,our_work_place)
+  			values (#{user_id},#{attendance_status},#{attendance_clock_in},#{attendance_clock_out},#{in_work_place},#{our_work_place})
+  		</insert>
+  		<select id="selectAllAttendance" resultType="Attendance">
+  			select * from attendance
+  		</select>
+  		
+  		<select id="selectAttendanceById" parameterType="_int" resultType="Attendance">
+  			select * from attendance where attendance_id = #{attendance_id}
+  		</select>
+  		<delete id="deleteAttendanceById" parameterType="_int">
+  			delete from attendance where  attendance_id = #{attendance_id}
+  		</delete>
+  		<update id="updateAttendance" parameterType="Attendance">
+  			update attendance set 
+	  			user_id=#{user_id},attendance_status=#{attendance_status},attendance_clock_in=#{attendance_clock_in},attendance_clock_out=#{attendance_clock_out},
+	  			in_work_place=#{in_work_place},our_work_place=#{our_work_place}
+  				where attendance_id = #{attendance_id}
+  		</update>
+  </mapper>
